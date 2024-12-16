@@ -1,0 +1,466 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #3b6978, #204051);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Section Styles */
+section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Form Section */
+.form-section {
+  margin: 0 auto;
+  max-width: 800px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  margin-bottom: 10px;
+}
+
+.form-section h2 {
+  margin-bottom: 1.5rem;
+  color: #204051;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+form input,
+form select {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #74ebd5;
+  box-shadow: 0 0 5px rgba(116, 235, 213, 0.8);
+}
+
+form button {
+  grid-column: span 2;
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #204051, #3b6978);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-transform: uppercase;
+}
+
+form button:hover {
+  background: linear-gradient(90deg, #3b6978, #204051);
+}
+
+/* Search Section */
+.search-section {
+  text-align: center;
+  margin-bottom: 2rem; /* Adds gap below the search section */
+}
+
+.search-section input,
+.search-section button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.search-section input:focus {
+  outline: none;
+  border-color: #74ebd5;
+  box-shadow: 0 0 5px rgba(116, 235, 213, 0.8);
+}
+
+.search-section button {
+  background: linear-gradient(90deg, #28a745, #218838);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-section button:hover {
+  background: linear-gradient(90deg, #218838, #28a745);
+}
+
+/* Form Section */
+.form-section {
+  margin: 0 auto;
+  max-width: 800px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+}
+
+
+/* Table Section */
+.table-section h2 {
+  margin-bottom: 1rem;
+  color: #204051;
+  text-align: center;
+}
+
+.table-section {
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+  background: linear-gradient(90deg, #3b6978, #204051);
+  color: white;
+}
+
+table th,
+table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+table tbody tr:hover {
+  background: rgba(116, 235, 213, 0.1);
+  cursor: pointer;
+}
+
+table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Slightly darker background overlay */
+  z-index: 1000;
+  overflow: hidden; /* Prevent scrolling when modal is open */
+}
+
+.modal-content {
+  background: #ffffff; /* Bright white background */
+  margin: 10% auto; /* Center the modal vertically and horizontally */
+  padding: 2rem;
+  border-radius: 12px; /* Smooth rounded corners */
+  max-width: 500px;
+  position: relative; /* For absolute positioning of the close button */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a professional look */
+  text-align: left; /* Align text to the left for better readability */
+  animation: fadeIn 0.3s ease-in-out; /* Subtle fade-in effect */
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+  color: #204051; /* Subtle dark blue for titles */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-content p {
+  color: #333;
+  margin: 0.5rem 0;
+  line-height: 1.5; /* Improved readability */
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem; /* Large enough to be noticeable */
+  font-weight: bold;
+  color: #333; /* Neutral color for the close icon */
+  cursor: pointer;
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.close:hover {
+  color: #e63946; /* Red color on hover for better interactivity */
+}
+
+/* Fade-in animation for modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Pagination Styles */
+#pagination {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#pagination button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #3b6978, #204051);
+  color: white;
+  cursor: pointer;
+  margin: 0 0.5rem;
+}
+
+#pagination button:hover {
+  background: linear-gradient(90deg, #204051, #3b6978);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+#googleSignInButton {
+  display: inline-block;
+  background-color: #4285f4; /* Google Blue */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#googleSignInButton:hover {
+  background-color: #357ae8; /* Darker Google Blue for hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+#googleSignInButton:active {
+  background-color: #2c62d6; /* Even darker Google Blue for click */
+  transform: scale(0.95); /* Slight shrink effect */
+}
+
+#googleSignInButton img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+/* Styling the Search Section */
+.search-section {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 20px; /* Padding around the section */
+  margin: 20px auto; /* Center alignment with top and bottom margins */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  max-width: 600px; /* Constrain the width for better focus */
+}
+
+.search-section .container {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center align the content */
+}
+
+.search-section h2 {
+  font-size: 1.8rem; /* Heading size */
+  color: #333; /* Darker text color for readability */
+  margin-bottom: 15px; /* Space below the heading */
+}
+
+.search-section input[type="text"] {
+  width: 100%; /* Full width input field */
+  max-width: 500px; /* Constrain the width */
+  padding: 10px; /* Inner spacing */
+  font-size: 1rem; /* Readable font size */
+  border: 1px solid #ccc; /* Border for the input */
+  border-radius: 4px; /* Rounded corners */
+  outline: none; /* Remove outline on focus */
+  transition: border-color 0.3s; /* Smooth transition for focus */
+}
+
+.search-section input[type="text"]:focus {
+  border-color: #007bff; /* Highlight border on focus */
+}
+
+.search-section button {
+  margin-top: 10px; /* Space above the button */
+  padding: 10px 20px; /* Padding around the button */
+  font-size: 1rem; /* Button font size */
+  color: #fff; /* White text */
+  background-color: #007bff; /* Primary blue color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+.search-section button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* General Button Styling */
+button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin: 10px 5px;
+}
+
+/* Hover Effects */
+button:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific Styling for Print Buttons */
+#printTable,
+#printDetails {
+  background-color: #007BFF; /* Blue */
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Hover Effects for Print Buttons */
+#printTable:hover,
+#printDetails:hover {
+  background-color: #0056b3; /* Darker Blue */
+  color: #fff;
+}
+
+/* Alignment of Buttons */
+button {
+  display: inline-block;
+  text-align: center;
+}
+
+/* Dropdown Button for Credit Transactions */
+.credit-dropdown {
+  padding: 8px 12px; /* Padding around the button */
+  font-size: 1rem; /* Readable font size */
+  color: #ffffff; /* White text color */
+  background-color: #dc3545; /* Distinct red color to indicate credit */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover and active states */
+}
+
+/* Hover Effect */
+.credit-dropdown:hover {
+  background-color: #b02a37; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+/* Active Effect */
+.credit-dropdown:active {
+  background-color: #9a202c; /* Even darker red on click */
+  transform: scale(0.95); /* Slightly shrink the button on click */
+}
+
+/* General Select Styling */
+.update-payment-method {
+  width: 120px;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #c92929;
+  color: #fefefe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.update-payment-method:hover {
+  background-color: #14789d;
+  border-color: #007bff;
+}
+
+/* Focus effect */
+.update-payment-method:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color: #007bff;
+}
+
+/* Dropdown options */
+.update-payment-method option {
+  background-color: white;
+  color: #333;
+}
+
+
